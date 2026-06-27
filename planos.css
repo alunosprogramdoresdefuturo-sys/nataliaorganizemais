@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif; /* Alinhado com o primeiro CSS */
+}
+
+body {
+  background: #f6f9fd; /* Cor de fundo idêntica */
+  color: #345;        /* Cor do texto padrão */
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: #fff; /* Fundo branco do primeiro header */
+  align-items: center;
+  height: 90px;     /* Altura padronizada */
+}
+
+.logo {
+  font-size: 28px;    /* Tamanho do primeiro logo */
+  font-weight: 700;
+  color: #2f5fa6;     /* Azul principal do logo */
+}
+
+.nav a {
+  color: #345;        /* Cor do menu padrão */
+  margin-left: 20px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.nav a:hover,
+.nav .active {
+  color: #58c687 !important; /* Verde ativo */
+  font-weight: 600;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px; /* Alinhado ao padding do primeiro */
+  background: linear-gradient(180deg, #edf5ff, #e7f1fc); /* Gradiente do primeiro hero */
+}
+
+.hero h1 {
+  font-size: 55px;    /* Tamanho do h1 do primeiro hero */
+  color: #24528f;     /* Azul escuro dos títulos */
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;    /* Tamanho do p do primeiro hero */
+  color: #667;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* PLANOS */
+.plans {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 80px 40px; /* Seguindo o padrão de espaçamento */
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white; /* Cards brancos como os feature-cards */
+  padding: 35px;
+  width: 280px;
+  border-radius: 20px; /* Bordas mais arredondadas (20px) */
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05); /* Sombra suave idêntica */
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Mesma intensidade de hover */
+}
+
+/* Destaque de plano usa a cor verde principal */
+.highlight {
+  border: 2px solid #58c687; 
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #24528f; /* Azul dos títulos */
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 15px 0;
+  color: #2f5fa6; /* Azul do preço */
+}
+
+.card ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.card ul li {
+  margin: 10px 0;
+  color: #666; /* Cor do texto corrido */
+}
+
+/* BOTÃO */
+button {
+  padding: 12px 28px; /* Padding do .btn-login */
+  border: none;
+  background: #58c687; /* Verde principal */
+  color: white;        /* Texto branco */
+  cursor: pointer;
+  border-radius: 10px; /* Arredondamento do botão */
+  font-weight: bold;
+  text-decoration: none;
+  transition: .3s;
+}
+
+button:hover {
+  background: #46b374; /* Um tom de verde levemente mais escuro para o hover */
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(47, 95, 166, 0.3); /* Overlay usando o azul translúcido */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px); /* Efeito moderno de desfoque */
+}
+
+.modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,.1);
+}
+
+/* Responsividade mantendo o padrão */
+@media(max-width: 900px) {
+  .hero h1 {
+    font-size: 38px;
+  }
+  .plans {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planos</title>
+  <link rel="stylesheet" href="/css/planos.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">OrganizeMais</div>
+
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="pages/recursos.html">Recursos</a>
+      <a href="pages/planos.html" class="active">Planos</a>
+      <a href="pages/contato.html">Contato</a>
+      <a href="pages/entrar.html">Entrar</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Escolha o plano ideal para você</h1>
+    <p>Desbloqueie recursos exclusivos e leve seus hobbies para outro nível</p>
+  </section>
+
+  <!-- PLANOS -->
+  <section class="plans">
+
+    <div class="card">
+      <h2>Gratuito</h2>
+      <p class="price">R$0</p>
+      <ul>
+        <li>Acesso básico à plataforma</li>
+        <li>Publicações limitadas</li>
+        <li>Comunidade aberta</li>
+      </ul>
+      <button onclick="selectPlan('Gratuito')">Começar</button>
+    </div>
+
+    <div class="card highlight">
+      <h2>Pro</h2>
+      <p class="price">R$19,90</p>
+      <ul>
+        <li>Posts ilimitados</li>
+        <li>Feed personalizado</li>
+        <li>Suporte prioritário</li>
+        <li>Recomendações inteligentes</li>
+      </ul>
+      <button onclick="selectPlan('Pro')">Assinar Pro</button>
+    </div>
+
+    <div class="card">
+      <h2>Premium</h2>
+      <p class="price">R$39,90</p>
+      <ul>
+        <li>Tudo do Pro</li>
+        <li>Monetização de conteúdo</li>
+        <li>Estatísticas avançadas</li>
+        <li>Destaque no feed</li>
+      </ul>
+      <button onclick="selectPlan('Premium')">Assinar Premium</button>
+    </div>
+
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3 id="modalTitle"></h3>
+      <p>Plano selecionado com sucesso!</p>
+      <button onclick="closeModal()">Fechar</button>
+    </div>
+  </div>
+
+  <script src="planos.js"></script>
+</body>
+</html>

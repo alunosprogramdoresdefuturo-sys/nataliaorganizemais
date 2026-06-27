@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato</title>
+  <link rel="stylesheet" href="/css/contato.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">OrganizeMais</div>
+
+    <nav class="nav">
+      <a href="/index.html">Início</a>
+      <a href="pages/recursos.html">Recursos</a>
+      <a href="pages/planos.html">Planos</a>
+      <a href="pages/contato.html" class="active">Contato</a>
+      <a href="pages/entrar.html">Entrar</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Fale com a gente</h1>
+    <p>Tire dúvidas, envie sugestões ou entre em contato com o suporte</p>
+  </section>
+
+  <!-- CONTEÚDO -->
+  <section class="contact-container">
+
+    <!-- FORM -->
+    <div class="form-box">
+      <h2>Envie uma mensagem</h2>
+
+      <form onsubmit="sendMessage(event)">
+        <input type="text" id="name" placeholder="Seu nome" required />
+        <input type="email" id="email" placeholder="Seu e-mail" required />
+        <textarea id="message" placeholder="Sua mensagem..." required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <!-- INFO -->
+    <div class="info-box">
+      <h2>Informações</h2>
+      <p><strong>Email:</strong> suporte@hobbyworld.com</p>
+      <p><strong>Telefone:</strong> +55 (61) 99999-9999</p>
+      <p><strong>Atendimento:</strong> Seg - Sex, 08h às 18h</p>
+
+      <div class="socials">
+        <p>Redes sociais:</p>
+        <span>Instagram</span>
+        <span>Twitter</span>
+        <span>Discord</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3>Mensagem enviada!</h3>
+      <p>Em breve nossa equipe entrará em contato.</p>
+      <button onclick="closeModal()">Fechar</button>
+    </div>
+  </div>
+
+  <script src="contato.js"></script>
+</body>
+</html>

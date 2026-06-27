@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif; /* Alinhado com o primeiro CSS */
+}
+
+body {
+  background: #f6f9fd; /* Cor de fundo idêntica */
+  color: #345;        /* Cor do texto padrão */
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: #fff; /* Fundo branco do primeiro header */
+  align-items: center;
+  height: 90px;     /* Altura padronizada */
+}
+
+.logo {
+  font-size: 28px;    /* Tamanho do primeiro logo */
+  font-weight: 700;
+  color: #2f5fa6;     /* Azul principal do logo */
+}
+
+.nav a {
+  color: #345;        /* Cor do menu padrão */
+  margin-left: 20px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.nav a:hover,
+.nav .active {
+  color: #58c687 !important; /* Verde ativo */
+  font-weight: 600;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px; /* Alinhado ao padding do primeiro */
+  background: linear-gradient(180deg, #edf5ff, #e7f1fc); /* Gradiente do primeiro hero */
+}
+
+.hero h1 {
+  font-size: 55px;    /* Tamanho do h1 do primeiro hero */
+  color: #24528f;     /* Azul escuro dos títulos */
+}
+
+.hero p {
+  font-size: 20px;    /* Tamanho do p do primeiro hero */
+  color: #667;
+  max-width: 700px;
+  margin: 20px auto 0 auto;
+}
+
+/* CONTAINER */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 40px; /* Padrão de espaçamento das seções */
+  flex-wrap: wrap;
+}
+
+/* FORM & INFO BOX */
+.form-box, .info-box {
+  background: white; /* Caixas brancas como os feature-cards */
+  padding: 35px;
+  border-radius: 20px; /* Bordas mais arredondadas (20px) */
+  width: 350px;       /* Um pouco mais largo para acomodar bem o Poppins */
+  box-shadow: 0 10px 30px rgba(0,0,0,.05); /* Sombra suave idêntica */
+}
+
+.form-box h2,
+.info-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #24528f; /* Azul dos títulos */
+}
+
+/* INPUTS e TEXTAREA */
+input, textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px 15px;
+  border: 1px solid #e2e8f0; /* Borda sutil para campos em fundo branco */
+  background: #f8fafc;       /* Fundo levemente cinza para os inputs */
+  border-radius: 10px;       /* Arredondamento suave */
+  outline: none;
+  font-family: Poppins, sans-serif;
+  color: #345;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #2f5fa6;     /* Destaca com o azul principal ao focar */
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* BOTÃO */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #58c687; /* Verde principal */
+  color: white;        /* Texto branco */
+  border: none;
+  cursor: pointer;
+  border-radius: 10px; /* Arredondamento do botão */
+  font-weight: bold;
+  font-size: 16px;
+  transition: .3s;
+}
+
+button:hover {
+  background: #46b374; /* Tom de verde para o hover */
+}
+
+/* INFO */
+.info-box p {
+  margin: 15px 0;
+  color: #666; /* Cor do texto corrido */
+  line-height: 1.6;
+}
+
+.socials {
+  margin-top: 25px;
+}
+
+.socials span {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 8px 15px;
+  background: #edf5ff; /* Fundo azul bem claro */
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2f5fa6;      /* Texto no azul principal */
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(47, 95, 166, 0.3); /* Overlay usando o azul translúcido */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px); /* Efeito moderno de desfoque */
+}
+
+.modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,.1);
+}
+
+/* Responsividade */
+@media(max-width: 900px) {
+  .hero h1 {
+    font-size: 38px;
+  }
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-box, .info-box {
+    width: 100%;
+    max-width: 400px;
+  }
+}

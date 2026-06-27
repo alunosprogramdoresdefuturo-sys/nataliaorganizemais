@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entrar / Cadastro</title>
+  <link rel="stylesheet" href="/css/entrar.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">OrganizeMais</div>
+
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="pages/recursos.html">Recursos</a>
+      <a href="pages/planos.html">Planos</a>
+      <a href="pages/contato.html">Contato</a>
+      <a href="pages/entrar.html" class="active">Entrar</a>
+    </nav>
+  </header>
+
+  <!-- CONTAINER -->
+  <section class="container">
+
+    <div class="box">
+
+      <!-- TABS -->
+      <div class="tabs">
+        <button onclick="showLogin()" id="btnLogin" class="active">Entrar</button>
+        <button onclick="showRegister()" id="btnRegister">Cadastrar</button>
+      </div>
+
+      <!-- LOGIN -->
+      <form id="loginForm" onsubmit="login(event)">
+        <h2>Bem-vindo de volta</h2>
+
+        <input type="email" placeholder="Email" id="loginEmail" required />
+        <input type="password" placeholder="Senha" id="loginPassword" required />
+
+        <button type="submit">Entrar</button>
+      </form>
+
+      <!-- CADASTRO -->
+      <form id="registerForm" class="hidden" onsubmit="register(event)">
+        <h2>Criar conta</h2>
+
+        <input type="text" placeholder="Nome" id="name" required />
+        <input type="email" placeholder="Email" id="email" required />
+        <input type="password" placeholder="Senha" id="password" required />
+
+        <button type="submit">Cadastrar</button>
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+      <button onclick="closeModal()">OK</button>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
